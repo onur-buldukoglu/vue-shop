@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProductList from "@/components/ProductList.vue"
+</script>
 
 <template>
   <main>
-    <v-icon icon="mdi-home" />
+    <ProductList />
   </main>
 </template>
