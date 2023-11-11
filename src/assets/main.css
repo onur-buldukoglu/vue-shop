@@ -1,0 +1,12 @@
+html,
+body {
+  padding: 8rem 0;
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
