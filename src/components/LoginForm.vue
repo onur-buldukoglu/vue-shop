@@ -20,7 +20,6 @@ const rules = {
 }
 async function submitHandler() {
   if (isFormValid.value) {
-    console.log(JSON.stringify(user.value))
     const res = await fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
       headers: {
@@ -35,13 +34,13 @@ async function submitHandler() {
 </script>
 
 <template>
-  <h2>Login</h2>
+  <h2 class="text-primary align-self-center pb-4">Login</h2>
   <v-form @submit.prevent="submitHandler" v-model="isFormValid">
-    <v-sheet width="320px" class="mx-auto">
+    <v-sheet width="320px" class="mx-auto bg-accent">
       <v-text-field
         label="Username"
         type="text"
-        class="mb-2"
+        class="mb-2 bg-accent"
         clearable
         required
         v-model="user.username"
@@ -50,7 +49,7 @@ async function submitHandler() {
       <v-text-field
         label="Password"
         type="password"
-        class="mb-2"
+        class="mb-2 bg-accent"
         clearable
         required
         v-model="user.password"
@@ -60,11 +59,3 @@ async function submitHandler() {
     </v-sheet>
   </v-form>
 </template>
-
-<style>
-h2 {
-  color: #42b883;
-  align-self: center;
-  padding-bottom: 1rem;
-}
-</style>
