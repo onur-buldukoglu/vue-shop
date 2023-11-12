@@ -6,3 +6,7 @@ export interface Product {
   category: string
   image: string
 }
+
+export interface Cart {
+  items: Product[]
+}
